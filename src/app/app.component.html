@@ -1,0 +1,37 @@
+<form class="m-4" [formGroup]="personForm">
+  <div class="mb-3 row">
+    <label for="name" class="col-sm-2 col-form-label">Name: </label>
+    <div class="col-sm-10">
+      <input
+        id="name"
+        formControlName="name"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="lastName" class="col-sm-2 col-form-label">Last Name: </label>
+    <div class="col-sm-10">
+      <input
+        id="lastName"
+        formControlName="lastName"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="age" class="col-sm-2 col-form-label">Age: </label>
+    <div class="col-sm-10">
+      <input id="age" formControlName="age" type="text" class="form-control" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="mt-4 col-sm-10">
+      <button class="form-control btn btn-primary" (click)="submit(personForm)">
+        Submit
+      </button>
+    </div>
+  </div>
+</form>
