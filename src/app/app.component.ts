@@ -7,13 +7,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
     this.personForm.valueChanges.subscribe((person) => console.log(person));
   }
 
-  personForm = this._formBuilder.group({
+  personForm = this.fb.group({
     name: '',
     lastName: '',
     age: 0,
